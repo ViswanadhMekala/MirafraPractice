@@ -1,0 +1,105 @@
+ Typographical symbols and punctuation marks  Symbol  	  Unicode name of the symbol[a]  	Common name[b] 	Similar concepts
+´ 	Acute accent (freestanding) 	Acute accent 	Diacritics (accents)
+◌́ 	Combining acute accent (diacritic) 	Acute accent 	Diacritics (accents)
+≈ 	Almost equal to 	Approximation 	Tilde, Double hyphen, Double tilde
+& 	Ampersand 	Ampersand, And sign 	plus sign, Ligature (writing)
+⟨ 	Mathematical left angle bracket 	Angle brackets 	Bracket, Parenthesis, Less-than sign, Guillemet
+⟩ 	Mathematical right angle bracket 	Angle brackets 	Bracket, Parenthesis, Greater-than sign, Guillemet
+' 	Apostrophe (typewriter) 	Apostrophe 	Right single quotation mark ("typesetter's apostrophe"), Modifier letter apostrophe, Prime (symbol)
+’ 	Right single quotation mark 	Apostrophe 	The right single quotation mark is more often seen as the "typesetter's apostrophe".)
+* 	Asterisk 	Asterisk 	Asterism, Dagger
+⁂ 	Asterism 	Asterism 	Dinkus, Therefore sign
+@ 	Commercial at 	At sign 	monkey
+\ 	Reverse solidus 	Backslash 	Slash, Solidus (/)
+` 	Grave accent (freestanding) 	Backtick 	
+‱ 	Per ten thousand sign 	Basis point 	Per cent, per mille (per 1,000)
+∵ 	Because 	Because sign 	Therefore sign
+• 	Bullet 	Bullet 	Middle dot
+· 	Middle dot 	Interpunct 	Bullet
+℅ 	Care of 	Care of 	Look up care of at Wiktionary, the online dictionary
+‸ 	Caret 	Caret (proofreading) 	Caret (computing) (^)
+⁁ 	Caret insertion point 	Caret (proofreading) 	Caret (computing) (^)
+⎀ 	Insertion symbol 	Caret (proofreading) 	Caret (computing) (^)
+^ 	Circumflex accent (freestanding) 	Caret 	Hat operator, Chevron, Caret (proofreading)
+◌̂ 	Combining circumflex accent (diacritic) 	Circumflex 	Combining Diacritical Marks
+: 	Colon 	Colon 	Semicolon
+, 	Comma 	Comma 	Decimal separator
+⌘ 	Place of interest sign 	Command key 	also known as a "looped square"
+⁒ 	Commercial minus sign 	Commercial minus sign 	Minus sign, Division sign, Per cent sign, Obelus
+🄯 	Copyleft symbol 	Copyleft sign 	Copyright sign
+© 	Copyright sign 	Copyright sign 	Sound recording copyright symbol
+{ 	Left curly bracket 	Curly brackets, Braces 	Angle bracket, Parenthesis
+} 	Right curly bracket 	Curly brackets, Braces 	Angle bracket, Parenthesis
+¤ 	Currency sign 	Currency sign (generic) 	various Currency symbols.
+† 	Dagger 	Dagger 	Obelus, Footnotes, Latin cross
+‡ 	Double dagger 	Dagger (double) 	Obelus, Footnotes, Cross of Lorraine
+– 	En dash 	Endash 	Dash (many types)
+— 	Em dash 	Emdash 	Dash (many types)
+° 	Degree sign 	Degree sign 	Masculine ordinal indicator
+⌀ 	Diameter sign 	Diameter 	Ø (Scandinavian orthography), Slashed zero, Empty set
+÷ 	Division sign 	Division sign 	Slash (Solidus), Obelus
+◌ 	Dotted circle 	Dotted circle 	Combining Diacritical Marks
+… 	Horizontal ellipsis 	Ellipsis 	The form . . . is usually preferred
+= 	Equals sign 	Equal sign 	
+℮ 	Estimated symbol 	Estimated sign 	
+! 	Exclamation mark 	Exclamation point 	Inverted exclamation mark, Interrobang
+ª 	Feminine ordinal indicator 	Feminine ordinal indicator 	Female sign, Masculine ordinal indicator, Gender symbols
+♀ 	Female sign 	Female sign 	Gender symbol, LGBT symbols, Feminine ordinal indicator
+❦ 	Floral heart 	Fleuron 	Dingbat, Dinkus
+◌̀ 	Combining grave accent (diacritic) 	Grave accent 	Diacritic, Backtick
+> 	Greater-than sign 	Greater than sign 	Angle bracket
+« 	Left-pointing double angle quotation mark 	Guillemet, French quotation marks 	Angle brackets, quotation marks, Much less than
+» 	Right-pointing double angle quotation mark 	Guillemet, French quotation marks 	Angle brackets, quotation marks, Much greater than
+⚥ 	Male and female sign 	Hermaphrodite (botany) 	Gender symbol, LGBT symbols
+× 	Multiplication sign 	Hybrid (biology) 	X mark
+‐ 	Hyphen 	Hyphen 	Dash, Hyphen-minus
+- 	Hyphen-minus 	Hyphen-minus 	Minus sign, Hyphen, Dash
+⹀ 	Double hyphen 	Hyphen (double) 	
+⸗ 	Double oblique hyphen 	Hyphen (double) 	
+· 	Middle dot 	Interpunct 	Dot operator, Decimal separator
+‽ 	Interrobang 	Interrobang 	
+< 	Less-than sign 	Less-than sign 	Angle bracket
+◊ 	Lozenge 	Lozenge 	Square lozenge ("Pillow")
+♂ 	Male sign 	Male sign 	Gender symbol, LGBT symbols
+☞ 	White right pointing index 	Manicule 	Obelus (medieval usage)
+º 	Masculine ordinal indicator 	Masculine ordinal indicator 	Feminine ordinal indicator, Degree sign, Male sign, Gender symbols
+− 	Minus sign 	Minus sign 	Plus and minus signs, Hyphen-minus, Commercial minus
+# 	Number sign 	Number sign 	(also known as "octothorpe", "hash", Pound sign (US usage) and "hashtag sign"). Numero sign
+№ 	Numero sign 	Numero sign 	Number sign
+( 	Left parenthesis 	Parenthesis 	Brackets, Angle brackets, Curly brackets, Square brackets
+) 	Right parenthesis 	Parenthesis 	Brackets, Angle brackets, Curly brackets, Square brackets
+% 	Percent sign 	Per cent sign 	Per mille (per 1,000), Basis point (per 10,000)
+‰ 	Per mille sign 	Per mille sign 	Percent, Basis point
+. 	Full stop 	Period 	Interpunct, Decimal separator
+¶ 	Pilcrow sign 	Paragraph mark 	Section sign ('Silcrow')
+⌑ 	Square lozenge 	Square lozenge, Pillow 	'Pillow' is an informal nick-name used in the travel industry.
+| 	Vertical line 	Pipe 	
++ 	Plus sign 	Plus sign 	minus sign, ampersand
+± 	Plus-minus sign 	plus or minus 	minus or plus
+′ 	Prime 	Prime symbol 	foot (unit)
+″ 	Double prime 	Prime symbol 	Inch, Minute
+‴ 	Triple prime 	Prime symbol 	Second
+? 	Question mark 	Question mark 	Inverted question mark, Interrobang
+" 	Quotation mark (typewriter) 	Quotation mark (double) 	Prime symbols,Ditto mark. Guillemets
+“ 	Left double quotation mark (Curly) 	Quotation mark (double) 	Prime symbols,Ditto mark. Double prime
+” 	Right double quotation mark (Curly) 	Quotation mark (double) 	Prime symbols,Ditto mark. Double prime
+‘ 	Left single quotation mark 	Quotation mark (single) 	U+2018 ‘ LEFT SINGLE QUOTATION MARK
+’ 	Right single quotation mark 	Quotation mark (single) 	Apostrophe (The right single quotation mark is more often seen as the "typesetter's apostrophe".)
+® 	Registered sign 	Registered trademark 	Trademark symbols
+§ 	Section sign 	Section symbol 	section mark, double-s, 'silcrow' (after Pilcrow)
+; 	Semicolon 	Semicolon 	Greek question mark
+℠ 	Service mark 	Service mark 	Trademark symbols
+⚹ 	Sextile 	Sextile 	Star symbols
+/ 	Solidus 	Slash 	Called "slant" in ASCII. Division sign, Forward slash, Shilling sign, Virgule
+℗ 	Sound recording copyright 	Sound recording copyright 	Copyright sign
+[ 	Left square bracket 	Square brackets 	Angle bracket, Parenthesis
+] 	Right square bracket 	Square brackets 	Angle bracket, Parenthesis
+∴ 	Therefore 	Therefore sign 	Asterism, Because sign
+⁀ 	Undertie 	Tie (typography) 	
+~ 	Tilde (freestanding) 	Tilde 	Approximation, Wave dash, Double tilde
+◌̃ 	Combining tilde (diacritic) 	Tilde 	Diacritic
+™ 	Trade mark sign 	Trademark symbol 	Registered trade mark
+_ 	Low line 	Underscore 	Underline
+¡ 	Inverted exclamation mark 	Upside-down exclamation point 	Inverted question and exclamation marks
+¿ 	Inverted question mark 	Upside-down question mark 	Inverted question and exclamation marks
+

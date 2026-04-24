@@ -1,0 +1,70 @@
+Here is a list of essential Linux commands with a direct example for each.
+## 1. Navigation & Location
+
+* pwd (Print Working Directory): Shows exactly where you are in the filesystem.
+* Example: pwd (Outputs: /home/user/Documents).
+* ls (List): Lists the files and folders in your current directory.
+* Example: ls -l (Lists files in a detailed "long" format).
+* cd (Change Directory): Moves you to a different folder.
+* Example: cd /var/log (Moves you into the log folder). [1, 2, 3, 4, 5, 6] 
+
+## 2. File & Directory Management [4] 
+
+* mkdir (Make Directory): Creates a new folder.
+* Example: mkdir new_folder.
+* touch: Creates a new, empty file.
+* Example: touch report.txt.
+* cp (Copy): Copies a file or folder.
+* Example: cp file.txt backup.txt (Creates a copy named backup.txt).
+* mv (Move/Rename): Moves a file or changes its name.
+* Example: mv oldname.txt newname.txt (Renames the file).
+* rm (Remove): Deletes a file.
+* Example: rm file.txt.
+* rmdir: Deletes an empty folder.
+* Example: rmdir old_folder. [2, 3, 4, 5, 7, 8, 9, 10, 11] 
+
+## 3. Viewing & Searching Content
+
+* cat (Concatenate): Displays the entire content of a file on your screen.
+* Example: cat notes.txt.
+* head: Shows the first few lines of a file.
+* Example: head -n 5 file.txt (Shows the first 5 lines).
+* tail: Shows the last few lines of a file.
+* Example: tail -n 10 logs.txt (Shows the last 10 lines).
+* grep: Searches for a specific word or pattern inside a file.
+* Example: grep "error" syslog.txt (Finds every line with the word "error").
+* find: Searches for files and directories based on their name.
+* Example: find . -name "*.jpg" (Finds all JPEG files in the current folder). [2, 3, 4, 8, 12, 13, 14, 15, 16, 17] 
+
+## 4. System & Permissions
+
+* sudo (SuperUser Do): Runs a command with administrative (root) privileges.
+* Example: sudo apt update.
+* chmod (Change Mode): Changes the permissions of a file (who can read, write, or run it).
+* Example: chmod 755 script.sh.
+* top: Displays a real-time list of running processes and system resources.
+* Example: top.
+* df: Shows how much disk space is being used.
+* Example: df -h (Shows space in "human-readable" MB/GB). [2, 4, 8, 11, 18] 
+
+Would you like a more detailed breakdown of how to use file permissions or package managers like apt?
+
+[1] [https://www.geeksforgeeks.org](https://www.geeksforgeeks.org/linux-unix/file-system-navigation-commands-in-linux/)
+[2] [https://www.digitalocean.com](https://www.digitalocean.com/community/tutorials/linux-commands)
+[3] [https://stackify.com](https://stackify.com/15-essential-kali-linux-commands-ethical-hackers-need-to-know/)
+[4] [https://medium.com](https://medium.com/@amitmishraam941/mastering-the-linux-terminal-50-essential-commands-every-user-should-know-e637475eaae7)
+[5] [https://www.scribd.com](https://www.scribd.com/doc/47728166/Linux-Commands-File-Management)
+[6] [https://www.networkershome.com](https://www.networkershome.com/fundamentals/linux/linux-essential-commands-navigation-files/)
+[7] [https://www.allhandsontech.com](https://www.allhandsontech.com/linux/linux-commands-files/)
+[8] [https://www.digitalocean.com](https://www.digitalocean.com/community/tutorials/linux-commands)
+[9] [https://stackify.com](https://stackify.com/top-linux-commands-11-you-need-to-know/)
+[10] [https://contabo.com](https://contabo.com/blog/linux-navigation-and-file-management/)
+[11] [https://www.whizlabs.com](https://www.whizlabs.com/blog/top-basic-linux-commands/)
+[12] [https://www.geeksforgeeks.org](https://www.geeksforgeeks.org/linux-unix/file-management-in-linux/)
+[13] [https://docs.rackspace.com](https://docs.rackspace.com/docs/linux-file-management-commands-to-create-copy-move-and-delete-files)
+[14] [https://www.crio.do](https://www.crio.do/blog/20-basic-linux-commands-2024/)
+[15] [https://www.manageengine.com](https://www.manageengine.com/products/eventlog/kb/linux/linux-find-file.html)
+[16] [https://www.plesk.com](https://www.plesk.com/blog/various/find-files-in-linux-via-command-line/)
+[17] [https://medium.com](https://medium.com/@unknown_guy_10/a-brief-introduction-to-search-and-filter-commands-in-linux-linuxified-ep-1-639bb3dc81c0)
+[18] [https://www.geeksforgeeks.org](https://www.geeksforgeeks.org/linux-unix/basic-shell-commands-in-linux/)
+
