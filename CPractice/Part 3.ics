@@ -1,0 +1,93 @@
+BEGIN:VCALENDAR
+METHOD:REQUEST
+PRODID:Microsoft Exchange Server 2010
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID:India Standard Time
+BEGIN:STANDARD
+DTSTART:16010101T000000
+TZOFFSETFROM:+0530
+TZOFFSETTO:+0530
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:16010101T000000
+TZOFFSETFROM:+0530
+TZOFFSETTO:+0530
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+ORGANIZER;CN=Dinesh Dubbarajolla:mailto:dineshdubbarajolla@mirafra2.onmicro
+ soft.com
+ATTENDEE;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE;CN=viswanadhm
+ ekala@mirafra.com:mailto:viswanadhmekala@mirafra.com
+ATTENDEE;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE;CN=srinivas.g
+ oud@amd.com:mailto:srinivas.goud@amd.com
+ATTENDEE;ROLE=OPT-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE;CN=anirudha.s
+ arangi@amd.com:mailto:anirudha.sarangi@amd.com
+ATTENDEE;ROLE=OPT-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE;CN=Srikanth D
+ onthagani:mailto:dsrikanth@mirafra2.onmicrosoft.com
+ATTENDEE;ROLE=OPT-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE;CN=dsrikanth@
+ mirafra.com:mailto:dsrikanth@mirafra.com
+DESCRIPTION;LANGUAGE=en-US:\n______________________________________________
+ __________________________________\nMicrosoft Teams meeting\nJoin: https:/
+ /teams.microsoft.com/meet/45343145716131?p=fIT2EspJJZIhMVR27h\nMeeting ID:
+  453 431 457 161 31\nPasscode: Uy6Ji3S6\n________________________________\
+ nNeed help?<https://aka.ms/JoinTeamsMeeting?omkt=en-US> | System reference
+ <https://teams.microsoft.com/l/meetup-join/19%3ameeting_MTY0MTYzZGQtMzQxMC
+ 00NjEyLTg1ZjItODMyNzQxZWRlMzEz%40thread.v2/0?context=%7b%22Tid%22%3a%227be
+ 66c91-cab4-442a-8f0f-4b0f91b44c7c%22%2c%22Oid%22%3a%223d2fa415-02c3-4b1d-b
+ 730-b03071466347%22%7d>\nFor organizers: Meeting options<https://teams.mic
+ rosoft.com/meetingOptions/?organizerId=3d2fa415-02c3-4b1d-b730-b0307146634
+ 7&tenantId=7be66c91-cab4-442a-8f0f-4b0f91b44c7c&threadId=19_meeting_MTY0MT
+ YzZGQtMzQxMC00NjEyLTg1ZjItODMyNzQxZWRlMzEz@thread.v2&messageId=0&language=
+ en-US>\n__________________________________________________________________
+ ______________\n
+UID:040000008200E00074C5B7101A82E00800000000ABFA518661D1DC01000000000000000
+ 010000000DE394D2F6C07E941B16AF54DC297832F
+SUMMARY;LANGUAGE=en-US:Viswanadh Interview
+DTSTART;TZID=India Standard Time:20260423T143000
+DTEND;TZID=India Standard Time:20260423T153000
+CLASS:PUBLIC
+PRIORITY:5
+DTSTAMP:20260421T073613Z
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+SEQUENCE:0
+LOCATION;LANGUAGE=en-US:Microsoft Teams Meeting
+X-MICROSOFT-CDO-APPT-SEQUENCE:0
+X-MICROSOFT-CDO-OWNERAPPTID:2124722091
+X-MICROSOFT-CDO-BUSYSTATUS:TENTATIVE
+X-MICROSOFT-CDO-INTENDEDSTATUS:BUSY
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-CDO-IMPORTANCE:1
+X-MICROSOFT-CDO-INSTTYPE:0
+X-MICROSOFT-ONLINEMEETINGINFORMATION:{"OnlineMeetingChannelId":null\,"Onlin
+ eMeetingProvider":3}
+X-MICROSOFT-SKYPETEAMSMEETINGURL:https://teams.microsoft.com/l/meetup-join/
+ 19%3ameeting_MTY0MTYzZGQtMzQxMC00NjEyLTg1ZjItODMyNzQxZWRlMzEz%40thread.v2/
+ 0?context=%7b%22Tid%22%3a%227be66c91-cab4-442a-8f0f-4b0f91b44c7c%22%2c%22O
+ id%22%3a%223d2fa415-02c3-4b1d-b730-b03071466347%22%7d
+X-MICROSOFT-SCHEDULINGSERVICEUPDATEURL:https://api.scheduler.teams.microsof
+ t.com/teams/7be66c91-cab4-442a-8f0f-4b0f91b44c7c/3d2fa415-02c3-4b1d-b730-b
+ 03071466347/19_meeting_MTY0MTYzZGQtMzQxMC00NjEyLTg1ZjItODMyNzQxZWRlMzEz@th
+ read.v2/0
+X-MICROSOFT-SKYPETEAMSPROPERTIES:{"cid":"19:meeting_MTY0MTYzZGQtMzQxMC00NjE
+ yLTg1ZjItODMyNzQxZWRlMzEz@thread.v2"\,"rid":0\,"mid":0\,"uid":null\,"priva
+ te":true\,"type":0}
+X-MICROSOFT-DONOTFORWARDMEETING:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+X-MICROSOFT-REQUESTEDATTENDANCEMODE:DEFAULT
+X-MICROSOFT-ISRESPONSEREQUESTED:TRUE
+X-MICROSOFT-LOCATIONDISPLAYNAME:Microsoft Teams Meeting
+X-MICROSOFT-LOCATIONSOURCE:None
+X-MICROSOFT-LOCATIONS:[{"DisplayName":"Microsoft Teams Meeting"\,"LocationA
+ nnotation":""\,"LocationUri":""\,"LocationStreet":""\,"LocationCity":""\,"
+ LocationState":""\,"LocationCountry":""\,"LocationPostalCode":""\,"Locatio
+ nFullAddress":""}]
+BEGIN:VALARM
+DESCRIPTION:REMINDER
+TRIGGER;RELATED=START:-PT15M
+ACTION:DISPLAY
+END:VALARM
+END:VEVENT
+END:VCALENDAR
