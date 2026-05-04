@@ -7,7 +7,7 @@
 	.globl	main
 	.type	main, @function
 main:
-.LFB0:
+.LFB6:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -18,12 +18,10 @@ main:
 	leaq	.LC0(%rip), %rax
 	movq	%rax, %rdi
 	call	puts@PLT
-	movl	$0, %eax
-	popq	%rbp
-	.cfi_def_cfa 7, 8
-	ret
+	movl	$0, %edi
+	call	exit@PLT
 	.cfi_endproc
-.LFE0:
+.LFE6:
 	.size	main, .-main
 	.ident	"GCC: (Ubuntu 15.2.0-4ubuntu4) 15.2.0"
 	.section	.note.GNU-stack,"",@progbits
