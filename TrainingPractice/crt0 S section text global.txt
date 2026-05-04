@@ -1,0 +1,15 @@
+// crt0.S
+.section .text
+.global _start
+ 
+_start:
+    // Set up stack pointer
+    ldr x0, =_stack_top
+    mov sp, x0
+ 
+    // Call main()
+    bl main
+ 
+// If main returns → loop forever
+hang:
+    b hang
