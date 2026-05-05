@@ -1,0 +1,80 @@
+Below is a simple linker script and a breakdown of how it works.
+A linker script is a "blueprint" that tells the linker exactly where to place code and data in memory. This is essential for bare-metal or embedded programming where you must match the physical memory layout of your hardware. [1, 2, 3, 4] 
+## Simple Linker Script Example (my_script.ld)
+
+/* 1. Define the Entry Point */
+ENTRY(_start)
+
+/* 2. Define Memory Regions */
+MEMORY
+{
+    FLASH (rx) : ORIGIN = 0x08000000, LENGTH = 128K
+    RAM  (rwx) : ORIGIN = 0x20000000, LENGTH = 20K
+}
+
+/* 3. Map Code and Data to those Regions */
+SECTIONS
+{
+    /* The executable code goes into FLASH */
+    .text :
+    {
+        *(.text)           /* Include all .text sections from all files */
+        *(.rodata)         /* Include all read-only data (constants/strings) */
+    } > FLASH
+
+    /* Initialized data goes into RAM but is stored in FLASH */
+    .data :
+    {
+        _sdata = .;        /* Create a symbol for the start of RAM data */
+        *(.data)
+        _edata = .;        /* Create a symbol for the end of RAM data */
+    } > RAM AT > FLASH
+
+    /* Uninitialized data (zero-initialized) stays in RAM only */
+    .bss :
+    {
+        _sbss = .;
+        *(.bss)
+        *(COMMON)          /* Include "common" symbols not in a section */
+        _ebss = .;
+    } > RAM
+}
+
+------------------------------
+## Explanation of Key Parts## 1. ENTRY(_start)
+This tells the linker which function is the very first to run when the program starts. Without this, the linker might guess or default to the beginning of the .text section. [5, 6, 7] 
+## 2. MEMORY Block
+This describes the hardware.
+
+* FLASH: Non-volatile memory for your code. It is marked (rx) (read-only and executable).
+* RAM: Volatile memory for variables. It is marked (rwx) (read, write, and executable). [1, 2, 8] 
+
+## 3. SECTIONS Block
+This is where the magic happens. You map input sections (from your .o files) to output sections (in your final binary). [5, 9] 
+
+* .text: This is your machine code. We tell the linker to take *(.text) (the * is a wildcard for "all input files") and put it into the [FLASH region](https://wiki.osdev.org/Linker_Scripts). [5, 10] 
+* .rodata: Read-only data like constant strings (e.g., "Hello World"). [11, 12] 
+* .data: Global variables that have a starting value (e.g., int x = 5;). These need two addresses: the LMA (Load Memory Address in Flash) so they aren't lost when power is off, and the VMA (Virtual Memory Address in RAM) where they live during execution. [2, 9, 13] 
+* .bss: Global variables that start at zero (e.g., int y;). These don't take up space in Flash; the system just reserves space in RAM and clears it to zero at startup. [12, 13, 14] 
+
+## 4. The Dot . (Location Counter)
+The location counter tracks the current memory address as the linker places sections. You can assign it to symbols (like _sdata = .;) to let your C code know exactly where a section starts or ends in memory. [1, 5, 15, 16] 
+Would you like to know how to access these symbols (like _sbss) in your C code to zero out your memory at startup?
+
+[1] [https://interrupt.memfault.com](https://interrupt.memfault.com/blog/how-to-write-linker-scripts-for-firmware)
+[2] [https://dev.to](https://dev.to/ripan030/linker-scripts-explained-controlling-memory-layout-on-bare-metal-3ocb)
+[3] [https://pantech.ai](https://pantech.ai/linker-script-explained-a-beginner-to-advanced-guide-for-embedded-systems)
+[4] [https://www.linkedin.com](https://www.linkedin.com/pulse/understanding-linker-script-memory-map-file-abdur-rahman-a-lo2ac)
+[5] [https://users.informatik.haw-hamburg.de](https://users.informatik.haw-hamburg.de/~krabat/FH-Labor/gnupro/5_GNUPro_Utilities/c_Using_LD/ldLinker_scripts.html)
+[6] [https://wiki.osdev.org](https://wiki.osdev.org/Linker_Scripts)
+[7] [https://medium.com](https://medium.com/@mkklyci/an-introduction-to-linker-files-crafting-your-own-for-embedded-projects-60ad17193229)
+[8] [https://pantech.ai](https://pantech.ai/linker-script-explained-a-beginner-to-advanced-guide-for-embedded-systems)
+[9] [https://users.informatik.haw-hamburg.de](https://users.informatik.haw-hamburg.de/~krabat/FH-Labor/gnupro/5_GNUPro_Utilities/c_Using_LD/ldLinker_scripts.html)
+[10] [https://sourceware.org](https://sourceware.org/binutils/docs/ld/Simple-Example.html)
+[11] [https://medium.com](https://medium.com/@johnehk86/66-what-are-memory-and-sections-text-data-bss-rodata-etc-e134bd5b9ccd)
+[12] [https://medium.com](https://medium.com/@phancuong/an-introduction-to-linker-file-59ce2e9c5e73)
+[13] [https://jsandler18.github.io](https://jsandler18.github.io/explanations/linker_ld.html)
+[14] [https://cosmic-software.com](https://cosmic-software.com/faq/faq17.php)
+[15] [https://medium.com](https://medium.com/@phancuong/an-introduction-to-linker-file-59ce2e9c5e73)
+[16] [https://medium.com](https://medium.com/@phancuong/an-introduction-to-linker-file-59ce2e9c5e73)
+
