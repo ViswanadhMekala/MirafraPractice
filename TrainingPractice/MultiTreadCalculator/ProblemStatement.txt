@@ -1,0 +1,9 @@
+Multi-Process Calculator Using Shared Memory, Message Queues, and Thread Synchronization
+Design and implement a high-performance calculator system in C on Linux that demonstrates advanced inter-process communication (IPC) and intra-process synchronization.
+System Overview
+The system consists of:
+A client process that accepts mathematical expressions from the user.
+A calculator server process that evaluates expressions.
+A shared memory segment used for fast data exchange.
+A message queue mechanism for command/control signaling.
+Multiple threads inside the server to process requests concurrently.

@@ -1,0 +1,71 @@
+To compile and run this multi-process system, you need to link specific libraries—such as pthreads for the server threads and rt (real-time) for shared memory and semaphores. [1, 2] 
+## 1. Manual Compilation
+Use gcc to compile the server and client separately. Note the order: the -lpthread and -lrt flags should typically come at the end of the command. [1, 3] 
+
+* Compile the Server:
+
+gcc server.c -o server -lpthread -lrt
+
+* Compile the Client:
+
+gcc client.c -o client -lrt
+
+[1] 
+
+## 2. Automating with a Makefile
+A Makefile is the most efficient way to "club" these together for development. It ensures that only changed files are recompiled. [4, 5] 
+Create a file named Makefile in your directory:
+
+CC = gcc
+CFLAGS = -Wall -g
+LDFLAGS = -lpthread -lrt
+
+all: server client
+
+server: server.c common.h
+	$(CC) $(CFLAGS) server.c -o server $(LDFLAGS)
+
+client: client.c common.h
+	$(CC) $(CFLAGS) client.c -o client -lrt
+
+clean:
+	rm -f server client
+
+Simply type make in your terminal to build both programs simultaneously. [4] 
+## 3. Execution "Clubbing"
+Since these are separate processes that communicate, you must run the Server first so it can initialize the shared memory and message queues. [6] 
+
+* Option A: Multiple Terminals (Recommended)
+Open two terminal windows.
+1. In Terminal 1: ./server
+   2. In Terminal 2: ./client
+* Option B: Background Execution
+Run the server in the background and then launch the client in the same terminal:
+
+./server & ./client
+
+[7, 8] 
+* Option C: Automated Script
+Create a run.sh script to handle the startup and cleanup:
+
+#!/bin/bash
+./server &       # Start server in background
+SERVER_PID=$!    # Save its process ID
+sleep 1          # Give server a second to initialize
+./client         # Run client in foreground
+kill $SERVER_PID # Kill server when client exits
+
+
+Note: Always remember to use ipcs to check for lingering IPC resources and ipcrm to manually remove them if your program crashes. [9] 
+Would you like a script to automatically cleanup orphaned shared memory segments and message queues after a crash?
+
+[1] [https://askubuntu.com](https://askubuntu.com/questions/420722/how-to-compile-a-c-program-that-uses-pthread-h)
+[2] [https://stackoverflow.com](https://stackoverflow.com/questions/25934268/why-do-i-need-to-explicitly-link-pthread-and-rt-with-new-gcc-and-binutils)
+[3] [https://docs.oracle.com](https://docs.oracle.com/cd/E19253-01/816-5137/compile-94179/index.html)
+[4] [https://stackoverflow.com](https://stackoverflow.com/questions/5950395/makefile-to-compile-multiple-c-programs)
+[5] [https://www.geeksforgeeks.org](https://www.geeksforgeeks.org/c/how-to-use-make-utility-to-build-c-projects/)
+[6] [https://pages.cs.wisc.edu](https://pages.cs.wisc.edu/~gerald/cs537/Fall17/projects/p3a.html)
+[7] [https://stackoverflow.com](https://stackoverflow.com/questions/69320666/how-to-have-two-running-processes-in-linux-terminal-linux-command)
+[8] [https://stackoverflow.com](https://stackoverflow.com/questions/41110163/link-two-processes-bash)
+[9] [https://medium.com](https://medium.com/@pavanmaske6351/process-management-implementation-of-multithreading-and-ipc-in-c-9a893aa6be35)
+
