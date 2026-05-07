@@ -1,0 +1,52 @@
+To test your supervisor-worker code thoroughly, you need to simulate four specific scenarios: Normal Operation, Worker Exit, Worker Crash, and Supervisor Shutdown.
+Compile your code first: gcc -Wall -o supervisor supervisor.c.
+## 1. Test Normal Output Redirection
+Verify that the supervisor correctly captures and prints the worker's output through the pipe.
+
+* Command: ./supervisor ls -l
+* Expected Result: You should see [Supervisor] Worker started..., followed by the file list prefixed with [Worker]:, and then [Supervisor] Worker stopped. Restarting.... [1, 2] 
+
+## 2. Test Auto-Restart (Worker Exit)
+Confirm that when the worker finishes its task, the supervisor automatically spawns a new one. [3] 
+
+* Command: ./supervisor echo "Hello"
+* Expected Result: The program should print "Hello", say it is restarting, and then print "Hello" again every second in an infinite loop. [4] 
+
+## 3. Test Worker Crash/Failure
+Verify the code handles a command that doesn't exist or crashes.
+
+* Command: ./supervisor non_existent_command
+* Expected Result: You should see Exec failed: No such file or directory. The supervisor should acknowledge the stop and attempt to restart it every second. [5, 6] 
+
+## 4. Test Supervisor Shutdown (SIGINT)
+Ensure that hitting Ctrl+C cleans up the worker process before the supervisor exits, preventing "orphan" workers. [7, 8] 
+
+* Steps:
+1. Run ./supervisor sleep 100.
+   2. Open a second terminal and run ps -ef | grep sleep to find the child’s PID.
+   3. Go back to the first terminal and press Ctrl+C.
+* Expected Result: The supervisor should print [Supervisor] Shutting down... and specifically mention the child's PID. [4] 
+* Verification: Run ps -ef | grep sleep again in the second terminal; the sleep process should be gone. [9, 10] 
+
+## Summary of Edge Cases to Watch
+
+| Scenario [11, 12] | What to look for |
+|---|---|
+| Zombie Processes | Run top or ps after the worker finishes. If you see <defunct>, your waitpid is working correctly but needs to be called promptly. |
+| Buffer Overflow | If the worker outputs more than 256 bytes at once, ensure the while loop in the supervisor continues reading without crashing. |
+
+Would you like to see how to add a restart limit so the supervisor doesn't loop forever if the command keeps failing?
+
+[1] [https://stackoverflow.com](https://stackoverflow.com/questions/13801175/classic-c-using-pipes-in-execvp-function-stdin-and-stdout-redirection)
+[2] [https://www.youtube.com](https://www.youtube.com/watch?v=yLg-r5ggiZo&t=182)
+[3] [https://medium.com](https://medium.com/naukri-engineering/using-supervisor-to-manage-processes-in-linux-98ae4894e9c7)
+[4] [https://www.quora.com](https://www.quora.com/How-do-you-set-up-a-signal-handler-in-C-to-make-your-program-respond-to-Ctrl-C-without-crashing-Can-you-walk-through-a-simple-example)
+[5] [https://stackoverflow.com](https://stackoverflow.com/questions/19191030/pipe-fork-and-exec-two-way-communication-between-parent-and-child-process)
+[6] [https://www.digitalocean.com](https://www.digitalocean.com/community/tutorials/execvp-function-c-plus-plus)
+[7] [https://www.sanfoundry.com](https://www.sanfoundry.com/c-tutorials-signal-handlers/)
+[8] [https://www.geeksforgeeks.org](https://www.geeksforgeeks.org/c/signals-c-language/)
+[9] [https://github.com](https://github.com/Supervisor/supervisor/issues/1649)
+[10] [https://www.baeldung.com](https://www.baeldung.com/linux/sigint-and-other-termination-signals)
+[11] [https://www.scribd.com](https://www.scribd.com/document/899706406/23103128-Shourya-Ossp-Lab-W2)
+[12] [https://stackoverflow.com](https://stackoverflow.com/questions/47767995/exec-and-pipe-between-child-process-in-c)
+

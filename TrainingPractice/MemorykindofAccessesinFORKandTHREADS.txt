@@ -1,0 +1,47 @@
+The abbreviation unistd.h stands for Unix Standard.
+It is the header file that provides access to the POSIX (Portable Operating System Interface) API, which is the standard for Unix-like operating systems (including Linux and macOS).
+
+* uni: Unix
+* std: Standard
+* .h: Header file
+
+------------------------------
+## Fork vs. Threads: The Memory Test
+Here is the comparison code. Notice how a single variable x behaves differently in each scenario.
+## 1. The Fork (Separate Memory)
+
+#include <stdio.h>#include <unistd.h>
+int x = 10;
+int main() {
+    if (fork() == 0) {
+        x = 50; // Child changes its OWN copy of x
+        printf("Child x: %d\n", x);
+    } else {
+        sleep(1); // Wait for child
+        printf("Parent x: %d\n", x); // Parent x stays 10!
+    }
+    return 0;
+}
+
+## 2. The Thread (Shared Memory)
+Note: You must link this with -lpthread when compiling.
+
+#include <stdio.h>#include <pthread.h>
+int x = 10;
+void* myTask(void* arg) {
+    x = 50; // Thread changes the SHARED x
+    return NULL;
+}
+int main() {
+    pthread_t thread;
+    pthread_create(&thread, NULL, myTask, NULL);
+    pthread_join(thread, NULL); // Wait for thread
+
+    printf("Process x: %d\n", x); // x is now 50 for everyone!
+    return 0;
+}
+
+The big difference: In the Fork example, you have two x variables in two different memory "houses." In the Thread example, there is only one x that everyone can touch.
+Would you like to try compiling and running the Thread example to see it in action?
+
+
